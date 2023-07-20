@@ -2,7 +2,7 @@
 #include<stdlib.h>
 
 void createNode();
-void insertAtMiddleAfterKey(int val,int key,int n);
+void insertAtMiddleBeforeKey(int val,int key,int n);
 void display();
 
 struct node{
@@ -20,7 +20,7 @@ int main(){
     for(i=1;i<n;i++)createNode();
     int val,key;
     scanf("%d %d",&val,&key);
-    insertAtMiddleAfterKey(val,key,n);
+    insertAtMiddleBeforeKey(val,key,n);
     display();
     return 0;
 }
@@ -36,7 +36,7 @@ void createNode(){
     temp->next = NULL;
 }
 
-void insertAtMiddleAfterKey(int val,int key,int n){
+void insertAtMiddleBeforeKey(int val,int key,int n){
     struct node *ptr = head->next,*p=head,*temp;
     temp = malloc(sizeof(struct node));
     temp->data=val;
